@@ -51,7 +51,6 @@
 		<input type="text" id="myInput4" onkeyup="myFunction4()" placeholder="Search for Size.." title="Type in Size">
 		<input type="text" id="myInput5" onkeyup="myFunction5()" placeholder="Search for Category.." title="Type in Category">
 		<input type="text" id="myInput6" onkeyup="myFunction6()" placeholder="Search for Gender.." title="Type in Gender">
-		<input type="text" id="myInput7" onkeyup="myFunction7()" placeholder="Search for Product Name.." title="Type in Product name">
 
 		<table id="myTable" bgcolor="black" width="1800">
 			<tr bgcolor="grey"> <th width="100">Item</th> <th width="100">Item Number</th> <th width="100">Brand</th> <th width="100">Color</th> <th width="100">Size</th> <th width="100">Category</th> <th width="100">Gender</th> <th width="100">Retail Price</th> <th width="100">Your Price</th> <th width="100">Photo</th> </tr>
@@ -1234,27 +1233,6 @@ function myFunction6() {
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[6];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
-}
-</script>
-
-<script>
-function myFunction7() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput7");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[7];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
